@@ -1,0 +1,48 @@
+<div class="image"><br>
+  <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+  <div class="col-md-4 offset-4 mt-4">
+        <h2>Update Book</h2>
+      <div class="card-body" style="height: 450px;">
+        <form #updateBookForm='ngForm' (ngSubmit)='postUpdate(updateBookForm)'>
+
+          <div class="form-group">
+            <label for="bookId">Book Id</label>
+            <input type="text" name="bookId" id="bookId" [(ngModel)]='bookId' class="form-control" required
+              pattern="^[a-zA-Z ]{1,}$" readonly>
+          </div>
+          <!---------------- Book Name----------------------------->
+          <div class="form-group">
+            <label for="bookName">Book Name</label>
+            <input type="text" name="bookName" id="bookName" [(ngModel)]='bookName' class="form-control" required
+              pattern="^[a-zA-Z ]{2,}$">
+
+          </div>
+          <!-------------------Author Name ------------------------->
+          <div class="form-group">
+            <label for="author">Author Name</label>
+            <input type="text" name="author" id="author" [(ngModel)]='author' class="form-control" required
+              pattern="^[a-zA-Z ]{2,}$">
+
+          </div>
+          <!---------Publisher Name------------->
+          <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" id="publisher" [(ngModel)]='publisher' class="form-control" required
+              pattern="^[a-zA-Z ]{2,}$">
+          </div>
+
+          <!-----------Book Availability---------------->
+          <div class="form-group">
+            <label for="isAvailable">Book Availability</label>
+            <select name="isAvailable" id="isAvailable" [(ngModel)]='isAvailable' class="form-control" required>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    
+        <button type="submit" class="btn btn-dark float-right" (click)='postUpdate(updateBookForm)'>Update Book</button>
+      
+    </div>
+  </div>

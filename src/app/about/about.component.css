@@ -1,0 +1,18 @@
+p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-justify: newspaper;
+    color: black;
+  
+}
+h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(29, 35, 51);
+}
+
+img {
+    height: 91.8vh;
+  }

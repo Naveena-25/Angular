@@ -1,0 +1,34 @@
+
+.image{
+    height: 43.3em;
+    background-position:50% 50%;
+    background-size: cover; width: auto;
+    padding-top: 0%;
+    background-image:url('https://spiritualityhealth.com/assets/images/Articles/_articleSummaryImage/bestbooks.jpg');
+    background-attachment: scroll;
+}
+table{
+    border:solid ;
+    border-width: 2px ;
+    font-size: 20px;
+}
+th{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+}
+tr{
+    border: solid;
+    border-width: 2px;
+}
+td{
+    border: solid;
+    border-width: 2px;
+} 
+
+button{
+    border-radius: 30px;
+    font-weight: bold;
+}

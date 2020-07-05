@@ -1,0 +1,56 @@
+<div id="grad"></div>
+<nav class="navbar navbar-expand-lg navbar-dark purple-gradient">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+        <a class="nav-link" routerLink="/">Home <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf="libraryService.isNotLoggedIn()">
+        <a class="nav-link" routerLink="/about"> About <i class="fa fa-user-plus"></i></a>
+      </li>
+      <li class="nav-item active" *ngIf="libraryService.isNotLoggedIn()">
+        <a class="nav-link" routerLink="/contact">Contact Us</a>
+      </li>
+      <li class="nav-item " *ngIf="libraryService.isAdmin()">
+        <a class="nav-link" routerLink="/adduser"> Register <i class="fa fa-registered" aria-hidden="true"></i></a>
+      </li>
+      <!-- <li class="nav-item " *ngIf="libraryService.isAdmin()">
+        <a class="nav-link" routerLink="/addbook">Add Book</a>
+      </li> -->
+      <li class="nav-item " *ngIf="libraryService.isAdmin()">
+        <a class="nav-link" routerLink="/booklist"> Books <i class="fa fa-book fa-fw"></i></a>
+      </li>
+      <li class="nav-item " *ngIf="libraryService.isAdmin()">
+        <a class="nav-link" routerLink="/userlist"> Users <i class="fa fa-users" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item " *ngIf="libraryService.isUser()">
+        <a class="nav-link" routerLink="/booklist">Books <i class="fa fa-book fa-fw"></i> </a>
+      </li>
+      <li class="nav-item " *ngIf="libraryService.isUser()">
+        <a class="nav-link" routerLink="/borrowedbooks"> Borrowed Books <i class="fa fa-users" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="libraryService.isAdmin()">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Activities
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link" routerLink="/addbook" *ngIf="libraryService.isAdmin()">Add Book</a>
+          <a class="nav-link" routerLink="/requestlist" *ngIf="libraryService.isAdmin()">Request List</a>
+          <a class="nav-link" *ngIf="libraryService.isAdmin()" routerLink="/requestedbooks">Requested Books</a>
+          <a class="nav-link" *ngIf="libraryService.isAdmin()" routerLink="/returnbook">Returned Books</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ">
+      <li class="nav-item" *ngIf="libraryService.isNotLoggedIn()">
+        <a class="nav-link" [routerLink]="['/userlogin']">Login <i class="fas fa-sign-in-alt"></i></a>
+      </li>
+      <li class="nav-item" *ngIf="libraryService.isLoggedIn()">
+        <a class="nav-link" (click)="this.logoutClick()" routerLink="/userlogin">Logout <i
+            class="fas fa-sign-out-alt"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

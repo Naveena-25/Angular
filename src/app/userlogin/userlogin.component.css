@@ -1,0 +1,40 @@
+/* this is used to set properties for button styling */
+button{
+    width: 120px; 
+    border-radius:20px;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+}
+/* Setting background image and properties for image */
+.image{
+
+    height: 43.3em;
+    background-position:50% 50%;
+    background-size: cover; width: auto;
+    padding-top: 0%;
+    background-image:url('https://static1.squarespace.com/static/53cbed3de4b0c984e431b64d/53cd5808e4b0d40dcfea4855/593d549be4fcb5a7cbb206cc/1497193358774/open-book.jpg?format=2500w');
+    background-attachment: scroll;
+}
+  /* Setting Fonts and Styling for Label tag */
+  label{
+    font-size: 14px;
+    font-weight: bold;
+    float:left;
+  }
+  /* Setting and Styling Heading Tag */
+  h2{
+    font-family: 'Racing Sans One', cursive;
+    font-weight: bold;
+    text-align: center;
+  }
+  /* Applying Border Radius for Input text fields */
+  input{
+      border-radius: 10px;
+  }
+  /* Font Awesome Icon Styling */
+i{
+    font-size: 100px;
+    text-align: center;
+}
+

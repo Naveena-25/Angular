@@ -1,0 +1,50 @@
+<div class="image"><br>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container mt-4">
+        <div class="form-row ">
+                <input type="text" style="width: 900px" class="form-control" placeholder="🔍Search Book"
+                    [(ngModel)]="searchText" aria-label="Username" aria-describedby="basic-addon1">&nbsp;&nbsp;
+                <select style="float: right;width:200px;height: 38px;" class="selectpicker" id="inputGroupSelect01"
+                    [(ngModel)]="fieldName">
+                    <option value="bookId">Book Id</option>
+                    <option value="bookName" selected>Book Name</option>
+                    <option value="publisher">Publisher</option>
+                    <option value="author">Author</option>
+                </select>
+         </div>
+    
+    <br>
+    <table class="table table-hover table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+                <th>BOOK ID</th>
+                <th>BOOK NAME</th>
+                <th>AUTHOR</th>
+                <th>PUBLISHER</th>
+                <th>BOOK AVAILABILITY</th>
+                <th *ngIf="isAdminLogin"> DELETE </th>
+                <th *ngIf="isAdminLogin"> UPDATE </th>
+                <th *ngIf="isUserLogin"> REQUEST </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor='let book of books'> -->
+            <tr *ngFor='let book of books|searchBook:searchText:fieldName'>
+                <td>{{book.bookId}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.publisher}}</td>
+                <td>{{book.isAvailable}}</td>
+                
+                
+                <td *ngIf="isAdminLogin"><button class="btn btn-outline-danger" (click)='deleteBook(book)'> 
+                    <i class="far fa-trash-alt"></i> Delete</button></td>
+                <td *ngIf="isAdminLogin"><button class="btn btn-outline-success" (click)='updateBook(book)'>
+                    <i class="far fa-edit"></i> Update</button></td>
+                <td *ngIf="isUserLogin"><button class="btn btn-outline-primary" (click)='postRequests(book)'>Request</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>

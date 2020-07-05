@@ -1,0 +1,39 @@
+<div class="image"><br>
+<div class="container mt-4">
+    <div class="form-row ">
+
+        <input type="text" style="width: 900px" class="form-control" placeholder="🔍Search Book"
+            [(ngModel)]="searchText" aria-label="Username" aria-describedby="basic-addon1">&nbsp;&nbsp;
+        <select style="float: right;width:200px;height: 38px;" class="selectpicker" id="inputGroupSelect01"
+            [(ngModel)]="fieldName">
+            <option value="id">User Id</option>
+            <option value="name">User Name</option>
+            <option value="emailId" selected>emailId</option>
+            <option value="mobileNumber">Mobile Number</option>
+        </select>
+    </div>
+
+    <br><br>
+  <!-- Users List -->
+    <div class="card-deck">
+        <div class="row card-rounded">
+            <div class="row" style="padding-left: 30px;padding-bottom: 30px;"
+                *ngFor='let user of users|searchBook:searchText:fieldName'>
+                <div class="card card-inverse card-primary ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnhAUpSjNHh7W0MJAETSkRWLw1XlNc4jnOIabXw8ky6yoAbwy9&usqp=CAU">
+                    <blockquote class="card-blockquote p-3">
+                        <p><b>User Id : </b>{{user.id}}</p>
+                        <p><b>Name : </b>{{user.name}}</p>
+                        <p><b>Email Id : </b>{{user.emailId}}</p>
+                        <p><b>Mobile Number : </b>{{user.mobileNumber}}</p>
+                        <p><b>Role : &nbsp;</b>{{user.role}}</p>
+                        <p><b>Book Borrowed&nbsp; : </b>{{user.noOfBooksBorrowed}}</p>
+                        <p><b>Fine : </b>{{user.fine}}</p>
+
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

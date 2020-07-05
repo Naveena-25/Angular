@@ -1,0 +1,37 @@
+/* This is used to add properties for the image */
+.image{
+    height: 43.3em;
+    background-position:50% 50%;
+    background-size: cover; width: auto;
+    padding-top: 0%;
+    background-image:url('https://spiritualityhealth.com/assets/images/Articles/_articleSummaryImage/bestbooks.jpg');
+    background-attachment: scroll;
+}
+/* These are used to set the border and font properties for the tables,table headings,table rows and table data */
+table{
+    border:solid ; 
+    border-width: 2px ;
+    font-size: 20px;
+}
+th{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+
+}
+tr{
+    border: solid;
+    border-width: 2px;
+}
+td{
+    border: solid;
+    border-width: 2px;
+} 
+/* This is used to set the font properties for content inside dropdown menu */
+button{
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+}

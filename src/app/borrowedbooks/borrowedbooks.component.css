@@ -1,0 +1,50 @@
+/* css file is present in each component to provide additional styles to our webpage */
+
+table{
+    border:solid ;
+    border-width: 2px ;
+    font-size: 17px;
+}
+th{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+}
+tr{
+    border: solid;
+    border-width: 2px;
+}
+td{
+    border: solid;
+    border-width: 2px;
+} 
+option{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+select{
+    width: 150px;
+    height:30px;
+    font-size: 17px;
+    float: right;
+    border-radius: 4px;
+} 
+button{
+    border-radius: 30px;
+    font-weight: bold;
+}
+input{
+    border-radius: 40px;
+
+}
+
+.image{
+    height: 43.3em;
+    background-position:50% 50%;
+    background-size: cover; width: auto;
+    padding-top: 0%;
+    
+    background-image:url('https://spiritualityhealth.com/assets/images/Articles/_articleSummaryImage/bestbooks.jpg');
+    background-attachment: scroll;
+}

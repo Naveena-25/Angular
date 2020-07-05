@@ -1,0 +1,30 @@
+/* These are used to set the border and font properties for the tables,table headings,table rows and table data */
+table{
+    border:solid ;
+    border-width: 2px ;
+    font-size: 20px;
+}
+th{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+}
+tr{
+    border: solid;
+    border-width: 2px;
+}
+td{
+    border: solid;
+    border-width: 2px;
+} 
+.image{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYC_boKS-HlZk8w67qaupX1OKocpcW5G4CWUTSZ4R5F3raSQXs&usqp=CAU');
+    height: 43.3em;
+    background-position:50% 50%;
+    background-size: cover; width: auto;
+    padding-top: 0%;
+    background-color: rgb(245, 223, 242);
+    background-attachment: scroll;
+}

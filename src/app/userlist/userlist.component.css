@@ -1,0 +1,50 @@
+.image{
+height: 100%;
+background-position:50% 50%;
+background-size: cover; width: auto;
+padding-top: 0%;
+background-image:url('https://ak.picdn.net/shutterstock/videos/19068331/thumb/1.jpg');
+background-attachment: scroll;
+}
+select{
+    width: 150px;
+    height:30px;
+    font-size: 17px;
+    float: right;
+    border-radius: 4px;
+} 
+
+table{
+    border:solid ;
+    border-width: 2px ;
+    font-size: 20px;
+}
+th{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+}
+tr{
+    border: solid;
+    border-width: 2px;
+}
+td{
+    border: solid;
+    border-width: 2px;
+}
+b{
+    font-style: italic;
+    color: midnightblue;
+    text-align: left;
+    font-weight: bold;
+
+}
+blockquote{
+    font-weight: 600;
+}
+.card{
+    width: 260px;
+    height: 550px;
+}
